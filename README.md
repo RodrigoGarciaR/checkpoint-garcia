@@ -1,3 +1,9 @@
+# Aplicación de tienda enfocada al mundo gaming hecha en React JS
+
+Este será el repositorio para las actualizaciones de una aplicación para un ecommerce de articulos para videojuegos.
+
+Será realizada con JS.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

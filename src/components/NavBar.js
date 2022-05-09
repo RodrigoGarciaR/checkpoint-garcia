@@ -16,10 +16,10 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { RiShoppingCartLine } from 'react-icons/ri'
 
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const solutions = [
@@ -196,6 +196,7 @@ export default function NavBar() {
                       aria-hidden="true"
                     />
                   </Popover.Button>
+                  
 
                   <Transition
                     as={Fragment}
@@ -251,7 +252,7 @@ export default function NavBar() {
             </Popover>
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <FontAwesomeIcon icon={faShoppingCart} className='h-10' />
+          <RiShoppingCartLine className='text-3xl' />
           </div>
         </div>
       </div>

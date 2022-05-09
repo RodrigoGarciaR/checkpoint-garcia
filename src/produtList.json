@@ -1,0 +1,37 @@
+[{
+    "id": 1,
+    "name": "Nintendo Switch - Versión 1.1",
+    "price": 6499,
+    "img": "./images/switch.jpg",
+    "stock": 15
+}, {
+    "id": 2,
+    "name": "Nintendo Switch - Versión OLED",
+    "price": 8691,
+    "img": "./images/switcholed.jpg",
+    "stock": 12
+}, {
+    "id": 3,
+    "name": "PlayStation 5 - Standard Edition",
+    "price": 13999,
+    "img": "./images/ps5standard.jpg",
+    "stock": 7
+}, {
+    "id": 4,
+    "name": "PlayStation 5 - Digital Edition",
+    "price": 11499,
+    "img": "./images/ps5digital.jpg",
+    "stock": 3
+}, {
+    "id": 5,
+    "name": "Xbox Series S",
+    "price": 6899,
+    "img": "./images/xboxseriess.jpg",
+    "stock": 5
+}, {
+    "id": 6,
+    "name": "Xbox Series X",
+    "price": 15799,
+    "img": "./images/xboxseriesx.jpg",
+    "stock": 2
+}]

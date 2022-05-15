@@ -1,10 +1,10 @@
 .counter {
-    @apply border-2 border-black text-center
+    @apply text-center border-2 border-black;
 }
 
-.buttonCounter{
-    @apply m-2 px-3 bg-black rounded rounded-[12px] shadow-red-400 shadow-sm text-white
+.buttonCounter {
+    @apply m-2 px-3 bg-black rounded rounded-[12px] shadow-red-400 shadow-sm text-white;
 }
-.buttonCounter:active{
-    @apply m-2 px-3 bg-red-600 rounded rounded-[12px]
+.buttonCounter:active {
+    @apply m-2 px-3 bg-red-600 rounded rounded-[12px];
 }

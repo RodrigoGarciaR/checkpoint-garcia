@@ -1,0 +1,12 @@
+.dropdownContainer ul {
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: black;
+    padding: 10px 20px;
+    line-height: 2rem;
+    border-radius: 5px;
+}
+.dropdownContainer:hover ul {
+    max-height: fit-content;
+}

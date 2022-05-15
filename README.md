@@ -1,8 +1,18 @@
 # Aplicación de tienda enfocada al mundo gaming hecha en React JS
 
-Este será el repositorio para las actualizaciones de una aplicación para un ecommerce de articulos para videojuegos.
+## Introducción
 
-Será realizada con JS.
+Aplicación creada para el curso de React JS de CoderHouse. La idea surge del gusto que tengo en el mundo gaming.
+
+Se plantea tener únicamente productos relacionados a consolas, con las marcas dominantes en el mercado con sus respectivas consolas y juegos principales, en el cual se pueda separar por categorías para una mejor búsqueda y de ser posible agregar algunos otros filtros.
+
+## Dependencias extras
+
+Además de las dependencias sugeridas en el curso se hace uso de [**Tailwind CSS**](http://tailwindcss.com/ "Tailwind CSS") para darle estilos al proyecto y [**React Icons**](http://https://react-icons.github.io/react-icons/ "React Icons") para agregar los íconos necesarios al sitio.
+
+## Información extra
+
+Dentro de la página inicial no  se muestran los productos ya que la idea es poder hacer un home en donde puedan mostrarse productos destacados.
 
 # Getting Started with Create React App
 

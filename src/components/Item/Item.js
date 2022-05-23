@@ -1,12 +1,12 @@
 import React from "react";
-import ItemCount from "./ItemCount.js";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
-    const { id, name, price, img, stock } = product;
+    const { name, price, img, stock } = product;
     return (
-        <div className="text-center rounded shadow-lg shadow-black max-w-[283px]">
+        <div className="text-center rounded shadow-lg shadow-black max-w-[303px]">
             <div className="mt-5">
                 <Link to={`/item/${product.id}`}>
                     <img src={img} className="max-w-xs m-auto max-h-36" />

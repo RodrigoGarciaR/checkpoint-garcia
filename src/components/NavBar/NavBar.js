@@ -15,17 +15,17 @@ const NavBar = () => {
                         <li className="px-5">Home</li>
                     </Link>
                     <div className="dropdownContainer">
-                        <Link to="/productos">
+                        <Link to="/category/productos">
                             <li className="px-5">Productos</li>
                         </Link>
                         <ul>
-                            <Link to="/Nintendo">
+                            <Link to="/category/Nintendo">
                                 <li>Nintendo</li>
                             </Link>
-                            <Link to="/PlayStation">
+                            <Link to="/category/PlayStation">
                                 <li>PlayStation</li>
                             </Link>
-                            <Link to="/Xbox">
+                            <Link to="/category/Xbox">
                                 <li>Xbox</li>
                             </Link>
                         </ul>

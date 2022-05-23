@@ -1,33 +1,32 @@
-import { useEffect, useState } from "react";
-import productList from "../produtList.json";
-import ItemList from "./ItemList";
+import React, { useContext, useEffect, useState } from "react";
+import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { ItemsContext } from "../../ItemsContext";
 
 const ItemListContainer = () => {
+    const [items] = useContext(ItemsContext);
     const [products, setProducts] = useState([]);
 
     const { category } = useParams();
 
     useEffect(() => {
         const data = new Promise((resolve, reject) => {
-            const filterProducts = productList.filter(
+            const filterProducts = items.filter(
                 (product) => product.category === category
             );
 
             setTimeout(() => {
                 if (category === undefined) {
                     resolve(
-                        productList.filter(
-                            (product) => product.featured === true
-                        )
+                        items.filter((product) => product.featured === true)
                     );
                 } else if (category === "productos") {
-                    resolve(productList);
+                    resolve(items);
                 } else {
                     resolve(filterProducts);
                 }
 
-                resolve(productList);
+                resolve(items);
             }, 2000);
         });
         data.then((data) => {

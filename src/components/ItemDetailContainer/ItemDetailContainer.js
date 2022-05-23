@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
-import productList from "../produtList.json";
-import ItemDetail from "./ItemDetail.js";
+import React, { useEffect, useState, useContext } from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { ItemsContext } from "../../ItemsContext";
 
 const ItemDetailContainer = () => {
+    const [items] = useContext(ItemsContext);
     const [product, setProduct] = useState({});
 
     let { itemId } = useParams();
+    let idParse = parseInt(itemId);
 
     useEffect(() => {
         const data = new Promise((resolve, reject) => {
-            const filterDetailProduct = productList.filter(
-                (product) => product.id == itemId
+            const filterDetailProduct = items.filter(
+                (product) => product.id === idParse
             );
             setTimeout(() => {
                 resolve(filterDetailProduct);
-            }, 2000);
+            }, 20);
         });
         data.then((data) => {
             setProduct(data[0]);

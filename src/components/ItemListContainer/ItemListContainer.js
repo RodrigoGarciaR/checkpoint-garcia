@@ -15,19 +15,15 @@ const ItemListContainer = () => {
                 (product) => product.category === category
             );
 
-            setTimeout(() => {
-                if (category === undefined) {
-                    resolve(
-                        items.filter((product) => product.featured === true)
-                    );
-                } else if (category === "productos") {
-                    resolve(items);
-                } else {
-                    resolve(filterProducts);
-                }
-
+            if (category === undefined) {
+                resolve(items.filter((product) => product.featured === true));
+            } else if (category === "productos") {
                 resolve(items);
-            }, 2000);
+            } else {
+                resolve(filterProducts);
+            }
+
+            resolve(items);
         });
         data.then((data) => {
             setProducts(data);

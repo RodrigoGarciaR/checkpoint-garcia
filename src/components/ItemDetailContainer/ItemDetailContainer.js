@@ -15,9 +15,8 @@ const ItemDetailContainer = () => {
             const filterDetailProduct = items.filter(
                 (product) => product.id === idParse
             );
-            setTimeout(() => {
-                resolve(filterDetailProduct);
-            }, 20);
+
+            resolve(filterDetailProduct);
         });
         data.then((data) => {
             setProduct(data[0]);

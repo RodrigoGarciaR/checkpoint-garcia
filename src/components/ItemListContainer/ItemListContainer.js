@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
-import { useParams } from "react-router-dom";
-import { ItemsContext } from "../../ItemsContext";
+import React, { useContext, useEffect, useState } from 'react';
+import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import { ItemsContext } from '../../context/ItemsContext';
 
 const ItemListContainer = () => {
     const [items] = useContext(ItemsContext);
@@ -17,7 +17,7 @@ const ItemListContainer = () => {
 
             if (category === undefined) {
                 resolve(items.filter((product) => product.featured === true));
-            } else if (category === "productos") {
+            } else if (category === 'productos') {
                 resolve(items);
             } else {
                 resolve(filterProducts);

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
-import { ItemsContext } from "../../ItemsContext";
+import React, { useEffect, useState, useContext } from 'react';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { ItemsContext } from '../../context/ItemsContext';
 
 const ItemDetailContainer = () => {
     const [items] = useContext(ItemsContext);

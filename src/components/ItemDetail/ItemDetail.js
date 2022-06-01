@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
-import { CartContext } from "../../CartContext";
+import React, { useContext, useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ product }) => {
     let { id, img, name, price, stock } = product;
 
     const [count, setCount] = useState(0);
     const [addcart, setAddcart] = useState(true);
-    const [addProduct] = useContext(CartContext);
+    const { addProduct } = useContext(CartContext);
 
     const plus = () => {
         count < stock ? setCount(count + 1) : setCount(count);
@@ -52,7 +52,7 @@ const ItemDetail = ({ product }) => {
                 ) : (
                     <Link to="/cart">
                         <button
-                            className="m-2 px-3 bg-black rounded rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
+                            className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
                             onClick={() => {
                                 addProduct(id, name, price, img, count);
                             }}

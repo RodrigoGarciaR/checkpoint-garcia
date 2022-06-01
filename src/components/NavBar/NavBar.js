@@ -1,7 +1,7 @@
-import React from "react";
-import { IoCartOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import "./NavBar.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css';
 
 const NavBar = () => {
     return (
@@ -30,14 +30,7 @@ const NavBar = () => {
                             </Link>
                         </ul>
                     </div>
-                    <Link to="cart">
-                        <li className="pl-5 pr-1 text-xl">
-                            <IoCartOutline />
-                        </li>
-                    </Link>
-                    <Link to="cart">
-                        <li className="pr-5">0</li>
-                    </Link>
+                    <CartWidget />
                 </ul>
             </div>
         </div>

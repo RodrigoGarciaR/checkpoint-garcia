@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <div className="flex items-center justify-between bg-black">
             <Link to="/">
-                <img src="/logo.png" className="max-h-24" />
+                <img src="/logo.png" className="max-h-24" alt="logo" />
             </Link>
             <div>
                 <ul className="flex items-center text-white">
@@ -15,7 +15,7 @@ const NavBar = () => {
                         <li className="px-5">Home</li>
                     </Link>
                     <div className="dropdownContainer">
-                        <Link to="/category/productos">
+                        <Link to="/productos">
                             <li className="px-5">Productos</li>
                         </Link>
                         <ul>

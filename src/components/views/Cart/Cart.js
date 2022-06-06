@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './Cart.css';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
@@ -8,7 +8,7 @@ const Cart = () => {
 
     return (
         <>
-            {cart.length == 0 ? (
+            {cart.length === 0 ? (
                 <div className="mt-10">
                     <h2 className="text-3xl text-center">
                         Tu carrito está vacío
@@ -59,6 +59,11 @@ const Cart = () => {
                         <button className="buttonCounter" onClick={cleanCart}>
                             Vaciar carrito
                         </button>
+                        <Link to="/checkout">
+                            <button className="buttonCounter">
+                                Finalizar la compra
+                            </button>
+                        </Link>
                     </div>
                 </>
             )}

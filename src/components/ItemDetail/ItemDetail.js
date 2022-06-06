@@ -35,7 +35,7 @@ const ItemDetail = ({ product }) => {
 
     return (
         <div className="flex justify-around mt-10">
-            <img src={img} alt="Nintendo Switch 1.1" className="max-h-96" />
+            <img src={img} alt={name} className="max-h-96" />
             <div className="text-center">
                 <h4>{name}</h4>
                 <p>Stock: {stock}</p>
@@ -50,16 +50,27 @@ const ItemDetail = ({ product }) => {
                         plus={plus}
                     />
                 ) : (
-                    <Link to="/cart">
+                    <>
+                        <Link to="/cart">
+                            <button
+                                className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
+                                onClick={() => {
+                                    addProduct(id, name, price, img, count);
+                                }}
+                            >
+                                Ir al Carrito
+                            </button>
+                        </Link>
                         <button
                             className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
                             onClick={() => {
                                 addProduct(id, name, price, img, count);
+                                setAddcart(true);
                             }}
                         >
-                            Finalizar Compra
+                            Seguir comprando
                         </button>
-                    </Link>
+                    </>
                 )}
             </div>
         </div>

@@ -33,12 +33,17 @@ const Item = ({ product }) => {
     };
 
     return (
-        <div className="text-center rounded shadow-lg shadow-black max-w-[303px]">
+        <div className="px-5 text-center rounded shadow-lg shadow-black max-w-fit">
             <div className="mt-5">
                 <Link to={`/item/${product.id}`}>
-                    <img src={img} className="max-w-xs m-auto max-h-36" />
+                    <img
+                        src={img}
+                        className="max-w-xs m-auto max-h-36"
+                        alt={id}
+                    />
                     <p className="text-center">{name}</p>
                     <p className="text-center">$ {price} MXN</p>
+                    <p>Stock: {stock}</p>
                 </Link>
             </div>
             <div>

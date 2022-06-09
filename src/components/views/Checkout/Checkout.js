@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../../Firebase/Firebase';
+import { CartContext } from '../../../context/CartContext';
 
 const Shop = () => {
+    const { cart } = useContext(CartContext);
+
     const initialState = {
         name: '',
         phone: '',
@@ -10,6 +13,7 @@ const Shop = () => {
     };
 
     const [values, setValues] = useState(initialState);
+    const [orderID, setOrderID] = useState('');
 
     const handleonChange = (e) => {
         const { value, name } = e.target;
@@ -19,10 +23,17 @@ const Shop = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
+        let totalPrice = cart.reduce((acc, el) => acc + el.qty * el.price, 0);
+        let date = new Date();
+
         const docRef = await addDoc(collection(db, 'orders'), {
             buyer: values,
+            items: cart,
+            date: date.toLocaleDateString(),
+            total: totalPrice,
         });
         console.log('Document written with ID: ', docRef.id);
+        setOrderID(docRef.id);
     };
 
     return (
@@ -59,6 +70,11 @@ const Shop = () => {
                     Finalizar compra
                 </button>
             </form>
+            {orderID && (
+                <div className="px-10 py-5 mx-auto mt-10 font-semibold text-center text-white bg-green-600 w-fit">
+                    Muchas gracias por tu compra, tu número de orden es: {orderID}
+                </div>
+            )}
         </>
     );
 };

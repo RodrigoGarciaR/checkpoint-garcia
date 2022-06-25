@@ -7,12 +7,12 @@ const NavBar = () => {
     return (
         <div className="flex items-center justify-between bg-black">
             <Link to="/">
-                <img src="/logo.png" className="max-h-24" alt="logo" />
+                <img src="/logo.png" className="ml-10 max-h-24" alt="logo" />
             </Link>
             <div>
-                <ul className="flex items-center text-white">
+                <ul className="flex items-center mr-10 text-xl text-white">
                     <Link to="/">
-                        <li className="px-5">Home</li>
+                        <li className="px-5">Inicio</li>
                     </Link>
                     <div className="dropdownContainer">
                         <Link to="/productos">

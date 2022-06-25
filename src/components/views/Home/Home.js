@@ -22,7 +22,22 @@ const ItemListContainer = () => {
         getProducts();
     }, []);
 
-    return <ItemList products={products} />;
+    return (
+        <>
+            <img
+                src="https://firebasestorage.googleapis.com/v0/b/checkpoint-garcia.appspot.com/o/hero.png?alt=media&token=58917aac-c9d6-4673-a57e-da57cbaa0c4a"
+                className="w-full m-auto"
+                alt="Checkpoint Solo Gamers"
+            />
+
+            <div className="max-w-[1920px] mx-auto my-20">
+                <h2 className="pl-10 text-4xl fontRusso">
+                    Top <span className="text-secondary">Games</span>
+                </h2>
+                <ItemList products={products} />
+            </div>
+        </>
+    );
 };
 
 export default ItemListContainer;

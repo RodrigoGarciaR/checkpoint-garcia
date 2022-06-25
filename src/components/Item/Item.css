@@ -4,3 +4,85 @@
 .addCart:active {
     @apply m-2 px-3 bg-red-600 rounded rounded-[12px];
 }
+
+.itemCard {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 1), 0 4px 6px -4px rgb(0 0 0 / 1);
+    max-width: 250px;
+    min-width: 250px;
+    margin-top: 75px;
+}
+
+.imgCard {
+    position: relative;
+    z-index: 99;
+    bottom: 90px;
+    max-width: 200px;
+    max-height: 120px;
+    margin: auto;
+}
+
+.hexagon {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 100px;
+    height: 65px;
+    box-sizing: border-box;
+    transition: all 500ms;
+    border: 0.4vh solid transparent;
+    transform: scale(2.1);
+}
+
+.hexagon:after,
+.hexagon:before {
+    content: '';
+    border: inherit;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    border-radius: inherit;
+    height: 112%;
+    width: 100px;
+}
+
+/* Align them in such a way
+that they form a hexagon */
+.hexagon:before {
+    transform: rotate(60deg);
+}
+.hexagon:after {
+    transform: rotate(-60deg);
+}
+
+.hexagon:hover {
+    opacity: 0.7;
+}
+.xboxBackground {
+    background-color: green;
+}
+.xboxBackground:after,
+.xboxBackground:before {
+    background-color: green;
+}
+
+.playstationBackground {
+    background-color: blue;
+}
+
+.playstationBackground:after,
+.playstationBackground:before {
+    background-color: blue;
+}
+
+.nintendoBackgroud {
+    background-color: red;
+}
+
+.nintendoBackgroud:after,
+.nintendoBackgroud:before {
+    background-color: red;
+}

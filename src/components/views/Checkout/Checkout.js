@@ -8,6 +8,7 @@ const Shop = () => {
 
     const initialState = {
         name: '',
+        lastName: '',
         phone: '',
         mail: '',
     };
@@ -37,9 +38,13 @@ const Shop = () => {
     };
 
     return (
-        <>
+        <div className="my-20">
+            <h2 className="text-center text-7xl">Checkout</h2>
+            <p className="text-4xl text-center">
+                Ingresa tus datos para procesar tu compra
+            </p>
             <form
-                className="flex flex-col p-20 mx-auto mt-10 border-2 border-black max-w-fit"
+                className="flex flex-col p-20 mx-auto my-20 border-2 border-black max-w-fit"
                 onSubmit={onSubmit}
             >
                 <input
@@ -49,6 +54,16 @@ const Shop = () => {
                     name="name"
                     value={values.name}
                     onChange={handleonChange}
+                    required
+                ></input>
+                <input
+                    className="px-10 py-2 my-5 border-2 border-gray hover:border-black active:border-black"
+                    type="text"
+                    placeholder="Apellido"
+                    name="lastName"
+                    value={values.lastName}
+                    onChange={handleonChange}
+                    required
                 ></input>
                 <input
                     className="px-10 py-2 my-5 border-2 border-gray hover:border-black active:border-black"
@@ -57,6 +72,7 @@ const Shop = () => {
                     name="phone"
                     value={values.phone}
                     onChange={handleonChange}
+                    required
                 ></input>
                 <input
                     className="px-10 py-2 my-5 border-2 border-gray hover:border-black active:border-black"
@@ -65,6 +81,7 @@ const Shop = () => {
                     name="mail"
                     value={values.mail}
                     onChange={handleonChange}
+                    required
                 ></input>
                 <button className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600">
                     Finalizar compra
@@ -72,10 +89,11 @@ const Shop = () => {
             </form>
             {orderID && (
                 <div className="px-10 py-5 mx-auto mt-10 font-semibold text-center text-white bg-green-600 w-fit">
-                    Muchas gracias por tu compra, tu número de orden es: {orderID}
+                    Muchas gracias por tu compra, tu número de orden es:{' '}
+                    {orderID}
                 </div>
             )}
-        </>
+        </div>
     );
 };
 

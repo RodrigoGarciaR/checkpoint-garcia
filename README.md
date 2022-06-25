@@ -4,15 +4,29 @@
 
 Aplicación creada para el curso de React JS de CoderHouse. La idea surge del gusto que tengo en el mundo gaming.
 
-Se plantea tener únicamente productos relacionados a consolas, con las marcas dominantes en el mercado con sus respectivas consolas y juegos principales, en el cual se pueda separar por categorías para una mejor búsqueda y de ser posible agregar algunos otros filtros.
+Se plantea tener únicamente productos relacionados a consolas, con las marcas principales en el mercado con sus respectivas consolas y juegos, en el cual se pueda separar por categorías para una mejor búsqueda, agregar productos a un carrito y poder dejar datos para el proceso de la compra.
+
+No se considera tener alguna pasarela para el pago online.
 
 ## Dependencias extras
 
-Además de las dependencias sugeridas en el curso se hace uso de [**Tailwind CSS**](http://tailwindcss.com/ "Tailwind CSS") para darle estilos al proyecto y [**React Icons**](http://https://react-icons.github.io/react-icons/ "React Icons") para agregar los íconos necesarios al sitio.
+Además de las dependencias sugeridas en el curso se hace uso de las siguientes dependendencias:
+
+### Tailwind CSS
+
+Con el fin de poder dar estilos CSS al proyecto se opta por hacer uso de **Tailwind CSS**.
+
+**[Enlace a web de Tailwind](http://tailwindcss.com/)**
+
+### React Icons
+
+Siguiendo con la línea de poder darle estilos a al proyecto, se decidió usar **React Icons** para colocar los íconos correspondientes al carrito y redes sociales.
+
+  **[Enlace a React Icons](https://react-icons.github.io/react-icons/)**
 
 ## Información extra
 
-Dentro de la página inicial no  se muestran los productos ya que la idea es poder hacer un home en donde puedan mostrarse productos destacados.
+Dentro del home más allá de poder mostrar todos los productos se busca dar un poco más de foco a productos destacados, así como un banner en el cual se pueda comunicar información necesaria al consumer dependiendo de la situación.
 
 # Getting Started with Create React App
 

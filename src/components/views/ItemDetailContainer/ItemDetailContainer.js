@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../../ItemDetail/ItemDetail';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {
     collection,
     query,
@@ -12,7 +12,6 @@ import { db } from '../../../Firebase/Firebase';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
 
     let { itemId } = useParams();
 
@@ -30,11 +29,26 @@ const ItemDetailContainer = () => {
             setProduct(docs[0]);
         };
         getProducts();
-        setIsLoading(false);
     }, [itemId]);
 
     return (
-        <>{isLoading ? <p>Cargando...</p> : <ItemDetail product={product} />}</>
+        <>
+            {product === undefined ? (
+                <div className="my-20">
+                    <h2 className="text-center text-7xl"> Error 404</h2>
+                    <p className="text-4xl text-center">
+                        Este producto no existe.
+                    </p>
+                    <Link to="/">
+                        <p className="p-5 mx-auto mt-10 rounded-[12px] bg-black text-white text-center border-2 border-black max-w-fit shadow-sm shadow-red-400 active:bg-red-600">
+                            Regresar a la tienda
+                        </p>
+                    </Link>
+                </div>
+            ) : (
+                <ItemDetail product={product} />
+            )}
+        </>
     );
 };
 

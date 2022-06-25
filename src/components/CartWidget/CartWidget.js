@@ -10,20 +10,16 @@ const CartWidget = () => {
 
     return (
         <>
-            {cart.length === 0 ? (
-                <></>
-            ) : (
-                <>
-                    <Link to="/cart">
-                        <li className="pl-5 pr-1 text-xl">
-                            <IoCartOutline />
-                        </li>
-                    </Link>
-                    <Link to="/cart">
-                        <li className="pr-5">{itemsInCart}</li>
-                    </Link>
-                </>
-            )}
+            <Link to="/cart">
+                <li className="pl-5 pr-1 text-xl">
+                    <IoCartOutline className="text-2xl" />
+                </li>
+            </Link>
+            <Link to="/cart">
+                <li className="pr-5">
+                    {cart.length === 0 ? <></> : itemsInCart}
+                </li>
+            </Link>
         </>
     );
 };

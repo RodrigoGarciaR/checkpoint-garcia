@@ -9,7 +9,7 @@ const Cart = () => {
     return (
         <>
             {cart.length === 0 ? (
-                <div className="mt-10">
+                <div className="my-20">
                     <h2 className="text-3xl text-center">
                         Tu carrito está vacío
                     </h2>
@@ -23,7 +23,7 @@ const Cart = () => {
                 <>
                     {cart.map((product) => {
                         return (
-                            <div key={product.id} className="flex mt-10 ml-10">
+                            <div key={product.id} className="flex mt-20 ml-10">
                                 <span className="min-w-[400px]">
                                     <img
                                         src={product.img}
@@ -35,7 +35,7 @@ const Cart = () => {
                                     <p>{product.name}</p>
                                     <p>Precio unitario: ${product.price}</p>
                                     <p>Piezas: {product.qty}</p>
-                                    <p>Total: {product.price * product.qty}</p>
+                                    <p>Total: $ {product.price * product.qty}</p>
                                     <button
                                         className="buttonCounter"
                                         onClick={() =>
@@ -48,7 +48,7 @@ const Cart = () => {
                             </div>
                         );
                     })}
-                    <div className="mt-10 text-center">
+                    <div className="my-20 text-center">
                         <p className="text-2xl">
                             Total: ${' '}
                             {cart.reduce(

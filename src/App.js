@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/views/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/views/ItemDetailContainer/ItemDetailContainer';
 import Home from './components/views/Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,6 +8,7 @@ import Products from './components/views/Products/Products';
 import { CartProvider } from './context/CartContext';
 import Shop from './components/views/Checkout/Checkout';
 import Category from './components/views/Category/Category';
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -26,6 +26,7 @@ function App() {
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Shop />} />
                 </Routes>
+                <Footer />
             </CartProvider>
         </BrowserRouter>
     );

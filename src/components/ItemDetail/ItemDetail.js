@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ product }) => {
-    let { id, img, name, price, stock } = product;
+    let { id, img, name, price, stock, description } = product;
 
     const [count, setCount] = useState(0);
     const [addcart, setAddcart] = useState(true);
@@ -34,12 +34,17 @@ const ItemDetail = ({ product }) => {
     };
 
     return (
-        <div className="flex justify-around mt-10">
+        <div className="flex justify-around my-20">
             <img src={img} alt={name} className="max-h-96" />
             <div className="text-center">
-                <h4>{name}</h4>
-                <p>Stock: {stock}</p>
+                <h4 className="mb-10 font-bold">{name}</h4>
+                <p>
+                    <span className="font-bold">Stock:</span> {stock}
+                </p>
                 <p>$ {price} MXN</p>
+                <p className="max-w-xs my-10">
+                    <span className="font-bold">Descrpción:</span> {description}
+                </p>
                 {addcart ? (
                     <ItemCount
                         stock={stock}

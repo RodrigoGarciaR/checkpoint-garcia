@@ -24,6 +24,7 @@ const ItemDetail = ({ product }) => {
         } else if (count === 0) {
             alert(`El numero a agregar debe ser mayor a cero`);
         } else {
+            addProduct(id, name, price, img, count);
             alert(`Agregamos ${count} productos al carrito`);
             setAddcart(false);
         }
@@ -57,19 +58,13 @@ const ItemDetail = ({ product }) => {
                 ) : (
                     <>
                         <Link to="/cart">
-                            <button
-                                className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
-                                onClick={() => {
-                                    addProduct(id, name, price, img, count);
-                                }}
-                            >
+                            <button className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600">
                                 Ir al Carrito
                             </button>
                         </Link>
                         <button
                             className="m-2 px-3 bg-black rounded-[12px] shadow-red-400 shadow-sm text-white active:bg-red-600"
                             onClick={() => {
-                                addProduct(id, name, price, img, count);
                                 setAddcart(true);
                             }}
                         >
